@@ -13,9 +13,21 @@ Forum of dongbaek highschool : 동백 고등학교 커뮤니티
  <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
 </div>
 
-## Usage on Ubuntu
+## Usage on Linux
 ```sh
  pip install pyrebase
+ pip install flask
+ 
+ git clone https://github.com/lidarbtc/dongbaek-life.git
+ 
+ cd dongbaek-life
+ 
+ mkdir auth
+ cd auth
+ nano auth.json
+ (input your firebase info)
+ 
+ cd ..
 
  python3 app.py
  ```
