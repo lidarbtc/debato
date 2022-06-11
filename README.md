@@ -36,3 +36,7 @@ Forum of dongbaek highschool : 동백 고등학교 커뮤니티
 ```sh
  session : 05c67e3461a3b17896f063535c2ade0b91639be688a6de6d5665258995f0fec660
 ```
+
+## Special thanks
+
+성균관대 고준서님 코드를 바탕으로 제작되었습니다.
