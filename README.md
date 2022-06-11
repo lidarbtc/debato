@@ -4,7 +4,7 @@
  <img src="https://img.shields.io/github/forks/lidarbtc/dongbaek-life?color=%239999FF&style=for-the-badge"/> &nbsp;
  <img src="https://img.shields.io/github/license/lidarbtc/dongbaek-life?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
  
-forum of dongbaek highschool 동백 고등학교 커뮤니티
+Forum of dongbaek highschool 동백 고등학교 커뮤니티
 
 ## Language</br>
 
