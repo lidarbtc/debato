@@ -1,4 +1,9 @@
-# dongbaek life 동백 라이프
+# Dongbaek life 동백 라이프
+ <p>
+ <img src="https://img.shields.io/github/stars/lidarbtc/dongbaek-life?color=%23DF0067&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/forks/lidarbtc/dongbaek-life?color=%239999FF&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/license/lidarbtc/dongbaek-life?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
+ 
 forum of dongbaek highschool 동백 고등학교 커뮤니티
 
 flask based 플라스크 기반
