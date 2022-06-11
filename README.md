@@ -1,3 +1,5 @@
+<div align=center>
+ 
 # Dongbaek life 동백 라이프
  <p>
  <img src="https://img.shields.io/github/stars/lidarbtc/dongbaek-life?color=%23DF0067&style=for-the-badge"/> &nbsp;
