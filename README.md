@@ -22,9 +22,12 @@ Forum of dongbaek highschool : 동백 고등학교 커뮤니티
  
  cd dongbaek-life
  
+ mkdir auth
+ cd auth
  nano auth.json
- 
  (input your firebase info)
+ 
+ cd ..
 
  python3 app.py
  ```
