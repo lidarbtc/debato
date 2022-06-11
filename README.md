@@ -15,20 +15,11 @@ Forum of dongbaek highschool : 동백 고등학교 커뮤니티
 
 ## Usage on Linux
 ```sh
- pip install pyrebase
- pip install flask
+ pip3 install django
  
  git clone https://github.com/lidarbtc/dongbaek-life.git
- 
  cd dongbaek-life
  
- mkdir auth
- cd auth
- nano auth.json
- (input your firebase info)
- 
- cd ..
-
  python3 app.py
  ```
 
