@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light">
+            <thead class="thead-light text-dark">
+                <tr>
+                    <th>#</th>
+                    <th>제목</th>
+                    <th>아이디</th>
+                    <th>일시</th>
+                </tr>
+            </thead>
+            {% for board in boards %}
+            <tbody class="text-dark">
+                <tr onclick="location.href='/boards/detail/{{ board.id }}'">
+                    <th>{{ board.id }}</th>
+                    <td>{{ board.title }}</td>
+                    <td>{{ board.writer }}</td>
+                    <td>{{ board.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-12">
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    {% if boards.has_previous %}
+                    <a href="?p={{ boards.previous_page_number }}" class="page-link">이전으로</a>
+                    {% else %}
+                    <a href="#" class="page-link disabled">이전으로</a>
+                    {% endif %}
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">{{ boards.number }} / {{ boards.paginator.num_pages }}</a>
+                </li>
+                <li class="page-item">
+                    {% if boards.has_next %}
+                    <a href="?p={{ boards.next_page_number }}" class="page-link">다음으로</a>
+                    {% else %}
+                    <a href="#" class="page-link disabled">다음으로</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary" onclick="location.href='/boards/write/'">글쓰기</button>
+    </div>
+</div>
+{% endblock %}

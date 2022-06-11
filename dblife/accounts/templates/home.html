@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <h1>질문 게시판</h1>
+    </div>
+</div>
+<div class="row mt-5">
+    {% if request.session.user %}
+    <div class="col-6 text-center">
+        <button class="btn btn-primary btn-block text-center" onclick="location.href='/accounts/logout/'">로그아웃</button>
+    </div>
+    {% else %}
+    <div class="col-6">
+        <button class="btn btn-primary btn-block text-center" onclick="location.href='/accounts/login/'">로그인</button>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-primary btn-block text-center" onclick="location.href='/accounts/register/'">회원가입</button>
+    </div>
+    {% endif %}
+</div>
+<div class="row mt-1">
+    <div class="col-12">
+        <button class="btn btn-primary btn-block text-center" onclick="location.href='/boards/list'">게시물보기</button>
+    </div>
+</div>
+
+{% endblock %}

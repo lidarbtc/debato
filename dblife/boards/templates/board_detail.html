@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" class="form-control" id="title" value="{{ board.title }}" readonly>
+            <label for="contents">내용</label>
+            <textarea class="form-control" readonly>{{ board.contents }}</textarea>
+            <label for="tags">태그</label>
+            <span id="tags" class="form-control">
+                {{ board.tags.all|join:"," }}
+            </span>
+
+            <form method="POST" action="{% url 'comment_write' board.id %}">
+                {% csrf_token %}
+                {{ comments }}
+                <input type="submit" value="댓글 입력">
+            </form>
+            {% for comment in comment_view %}
+            <hr>
+            <p>{{ comment.author }}</p>
+            <p>{{ comment.comment }}</p>
+            <hr>
+            {% endfor %}
+        </div>
+        <button class="btn btn-primary" onclick="location.href='/boards/list/'">돌아가기</button>
+    </div>
+</div>
+{% endblock %}
