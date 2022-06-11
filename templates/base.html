@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dongbaek_life</title>
+    <title>FLASK_WORLD</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 </head>
 
 <body>
+    {% block message %}
+      
+    {% endblock message %}
     <header>
-        <p>dongbaek_life</p>
+        <a href="{{url_for('index')}}"><p>FLASK_WORLD</p></a>
         {% block user %}
 
         {% endblock user %}
