@@ -19,11 +19,15 @@ Forum of dongbaek highschool : 동백 고등학교 커뮤니티
  
  git clone https://github.com/lidarbtc/dongbaek-life.git
  cd dongbaek-life
- 
- python3 app.py
+ cd dblife
+
+ python3 manage.py runserver
  ```
 
 ## Contact Developer : 개발자 연락처
 ```sh
  session : 05c67e3461a3b17896f063535c2ade0b91639be688a6de6d5665258995f0fec660
 ```
+
+## special thanks
+코린이형준님 코드를 포크하여 제작하였습니다.
