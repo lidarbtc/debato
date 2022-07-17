@@ -1,0 +1,19 @@
+CREATE DATABASE dblife default CHARACTER SET UTF8;
+use dblife;
+CREATE TABLE usertbl(
+    userid VARCHAR(300) PRIMARY KEY NOT NULL,
+    usernick VARCHAR(300) NOT NULL,
+    userpw CHAR(60) NOT NULL,
+    userip VARCHAR(300),
+    useragent VARCHAR(300),
+    currentdate DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB;
+CREATE TABLE posttbl(
+    postid int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    posttitle VARCHAR(300) NOT NULL,
+    postcontent VARCHAR(300) NOT NULL,
+    userid VARCHAR(300),
+    userip VARCHAR(300),
+    useragent VARCHAR(300),
+    currentdate DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB;

@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>동백라이프 - 로그인</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+<link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/login.css" rel="stylesheet">
+    <link href="../../static/css/modals.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="text-center">
+
+    {%if ErrorTitle%}
+    <div class="modal modal-sheet d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title">{{ErrorTitle}}</h5>
+            <button type="button" onclick = "location.href = 'back2login'" class="btn-close" data-bs-dismiss="modal" aria-label=Close></button>
+          </div>
+          <div class="modal-body py-0">
+            <p>{{ErrorMessage}}</p>
+          </div>
+          <div class="modal-footer flex-column border-top-0">
+            <button type="button" onclick = "location.href = 'back2login'" class="btn btn-lg btn-primary w-100 mx-0 mb-2" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%endif%}
+    
+<main class="form-signin w-100 m-auto">
+  <form action="/login" method="POST">
+    <img class="mb-4" src="../../static/image/hashtag.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">로그인</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="id" placeholder="name@example.com" name="id" required>
+      <label for="floatingInput">아이디</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+      <label for="floatingPassword">비밀번호</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" id="form_submit">로그인</button>
+    <p class="mt-5 mb-3 text-muted">&copy; lidar made with ❤</p>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
