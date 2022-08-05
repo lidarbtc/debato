@@ -8,6 +8,8 @@
  
 Forum of dongbaek highschool : 동백 고등학교 커뮤니티
 
+Under a maintenance : 미완성 상태입니다.
+
 ## Language</br>
 
  <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
