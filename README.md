@@ -44,7 +44,8 @@ Under a maintenance : 미완성 상태입니다.
 
  # 실행 명령어
  ./target/release/debato
-
+ 
+ # 접속하는 방법
  그 후 http://127.0.0.1:8000 접속
  또한 http://127.0.0.1:8000/board/free 접속
 
@@ -52,6 +53,6 @@ Under a maintenance : 미완성 상태입니다.
 
 ## Contact Developer : 개발자 연락처
 
-```sh
+```
  session : 05c67e3461a3b17896f063535c2ade0b91639be688a6de6d5665258995f0fec660
 ```
