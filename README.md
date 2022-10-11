@@ -24,7 +24,7 @@ Under a maintenance : 미완성 상태입니다.
 
  cargo build --release
 
- # 여기부터 mysql
+ # 여기부터 mysql (mysql 창 안에서 아래 명령어를 사용)
 
     ```
     CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
