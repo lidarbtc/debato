@@ -27,19 +27,19 @@ Under a maintenance : 미완성 상태입니다.
  # 여기부터 mysql (mysql 창 안에서 아래 명령어를 사용)
 ```
 
-    ```sql
-    CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
+```sql
+   CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
 
-    CREATE DATABASE debato;
+   CREATE DATABASE debato;
 
-    grant all privileges on debato.* to 'dbuser'@'localhost';
+   grant all privileges on debato.* to 'dbuser'@'localhost';
 
-    flush privileges;
+   flush privileges;
 
-    # 여기서 script.sql cmd에 그대로 복사 붙여넣기
+   # 여기서 script.sql cmd에 그대로 복사 붙여넣기
 
-    exit;
-    ```
+   exit;
+```
 
 ```
 
