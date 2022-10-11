@@ -26,7 +26,7 @@ Under a maintenance : 미완성 상태입니다.
 
  # 여기부터 mysql
 
-    ```sql
+    ```
     CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
 
     CREATE DATABASE debato;
