@@ -35,7 +35,7 @@ Under a maintenance : 미완성 상태입니다.
 
     flush privileges;
 
-    여기서 script.sql cmd에 그대로 복사 붙여넣기
+    # 여기서 script.sql cmd에 그대로 복사 붙여넣기
 
     exit;
     ```
