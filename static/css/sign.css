@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+h1 {
+  padding-left: 24px;
+}
+.login-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.login-register-container input {
+  height: 60px;
+  width: 360px;
+  border: 1px solid #141414;
+  border-radius: 24px;
+  text-align: center;
+}
+.login-register-container .submit_btn {
+  width: 144px;
+}
+
+.submit_btn:hover {
+  transition: box-shadow 150ms ease-in-out, color 300ms ease-in-out;
+  box-shadow: 0 0 40px 40px #4ebbff inset;
+}

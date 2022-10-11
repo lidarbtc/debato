@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>debato</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sign.css" />
+  </head>
+  <body>
+    <div class="main-content-container">
+      <div class="login-register-container">
+        <div class="login_form">
+          <h1>Debato</h1>
+          <form>
+            <input type="text" name="email" class="text_field" placeholder="ID" />
+            <input type="password" name="password" class="text_field" placeholder="Password" />
+            <input type="submit" value="Login" class="submit_btn" />
+          </form>
+          <p class="flex__cc"><a class="modal" href="#">회원가입</a> <a href="">아이디/비밀번호 찾기</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

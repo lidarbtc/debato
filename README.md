@@ -14,15 +14,19 @@ Under a maintenance : 미완성 상태입니다.
 
 </div>
 
-## Usage on Linux
+## Usage on Debian
 
 ```sh
- pip3 install flask
+ sudo apt install cargo
 
- git clone https://github.com/lidarbtc/dongbaek-life.git
- cd dongbaek-life
+ git clone https://github.com/lidarbtc/debato.git
+ cd debato
 
- python3 app.py
+ cargo build --release
+
+ # 반드시 MYSQL 설정, rocket.toml 설정 후 실행
+
+ ./target/release/debato
 ```
 
 ## Contact Developer : 개발자 연락처

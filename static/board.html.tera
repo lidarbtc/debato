@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=, initial-scale=1.0" />
+  <title>debato</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/board.css" />
+</head>
+
+<body>
+  <!-- <header class="canvas"> -->
+  <div class="main-content-container">
+    <div class="header">
+      <a>동해갯뻘</a>
+      <a>백두산이과</a>
+      <a>마르고닳도록</a>
+      <a class="profile"> 금강산이</a>
+    </div>
+    <section class="board-section">
+      <div id="post" class="post">
+        <span id="posted-time-container">시간</span>
+        <span id="title-container">제목</span>
+        <span id="poster-container">닉네임</span>
+        <span id="recommanded-container">추천수</span>
+      </div>
+      {% for i in post %}
+      <div id="post" class="post">
+        <span id="posted-time">{{ i.time }}</span>
+        <span id="title">{{ i.title }}</span>
+        <span id="poster">{{ i.author }}</span>
+        <span id="recommanded">{{ i.like }}</span>
+      </div>
+      {% endfor %}
+    </section>
+    <div class="footer">
+      <div id="year">2022</div>
+      <div>made in korea</div>
+    </div>
+  </div>
+</body>
+
+</html>
