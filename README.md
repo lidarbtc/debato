@@ -41,7 +41,7 @@ Under a maintenance : 미완성 상태입니다.
    exit;
 ```
 
-```
+```sh
 
  # 여기가 mysql 끝
 
