@@ -10,7 +10,7 @@ Under a maintenance : 미완성 상태입니다.
 
 ## Language</br>
 
-<img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
+<img src="https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324"/></br>
 
 </div>
 
@@ -24,9 +24,30 @@ Under a maintenance : 미완성 상태입니다.
 
  cargo build --release
 
- # 반드시 MYSQL 설정, rocket.toml 설정 후 실행
+ # 여기부터 mysql
 
+    ```sql
+    CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
+
+    CREATE DATABASE debato;
+
+    grant all privileges on debato.* to 'dbuser'@'localhost';
+
+    flush privileges;
+
+    여기서 script.sql cmd에 그대로 복사 붙여넣기
+
+    exit;
+    ```
+
+ # 여기가 mysql 끝
+
+ # 실행 명령어
  ./target/release/debato
+
+ 그 후 http://127.0.0.1:8000 접속
+ 또한 http://127.0.0.1:8000/board/free 접속
+
 ```
 
 ## Contact Developer : 개발자 연락처

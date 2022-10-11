@@ -1,4 +1,4 @@
-CREATE DATABASE debato default CHARACTER SET UTF8;
+--CREATE DATABASE debato default CHARACTER SET UTF8;
 use debato;
 CREATE TABLE usertbl(
     userid VARCHAR(300) PRIMARY KEY NOT NULL,
