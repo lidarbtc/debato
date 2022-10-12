@@ -14,18 +14,18 @@
   <!-- <header class="canvas"> -->
   <div class="main-content-container">
     <div class="header">
-      <a>동해갯뻘</a>
-      <a>백두산이과</a>
-      <a>마르고닳도록</a>
-      <a class="profile"> 금강산이</a>
+      <a>동백고커뮤</a>
+      <a>자유 게시판</a>
+      <a>주식 게시판</a>
+      <a class="profile"> 로그인</a>
     </div>
     <div class="row1">
-      <div id="row1-inside-1">asfd</div>
-      <div id="row1-inside-2">asfd</div>
+      <div id="row1-inside-1">자유게시판</div>
+      <div id="row1-inside-2">배너</div>
     </div>
     <div class="row2">
-      <div id="row2-inside-1">asfd</div>
-      <div id="row2-inside-2">asfd</div>
+      <div id="row2-inside-1">주식 게시판</div>
+      <div id="row2-inside-2">최근 게시글</div>
     </div>
     <div class="row1">
       <div id="row1-inside-1">asfd</div>
@@ -37,7 +37,7 @@
     </div>
     <div class="footer">
       <div id="year">2022</div>
-      <div>made in korea</div>
+      <div>made with debato</div>
     </div>
   </div>
 </body>

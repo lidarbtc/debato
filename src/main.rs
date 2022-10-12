@@ -256,7 +256,7 @@ async fn writepost(
 #[get("/login")]
 fn login() -> Template {
     Template::render(
-        "login",
+        "sign",
         context! {
             sitename: 123,
         },
@@ -306,14 +306,22 @@ fn logout(jar: &CookieJar<'_>) -> Flash<Redirect> {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index])
+        .mount(
+            "/",
+            routes![
+                index,
+                admin,
+                board,
+                register,
+                registerpost,
+                login,
+                loginpost,
+                logout,
+                write,
+                writepost
+            ],
+        )
         .mount("/", FileServer::from(relative!("static")))
-        .mount("/debato", routes![admin])
-        .mount("/", routes![board])
-        .mount("/register", routes![register, registerpost])
-        .mount("/login", routes![login, loginpost])
-        .mount("/logout", routes![logout])
-        .mount("/", routes![write, writepost])
         .attach(Template::fairing())
         .attach(Debato::init())
 }
