@@ -2,6 +2,8 @@
 extern crate rocket;
 extern crate bcrypt;
 
+use rocket::request::FlashMessage;
+
 use rocket::fs::{relative, FileServer};
 
 use std::net::SocketAddr;
@@ -254,11 +256,16 @@ async fn writepost(
 
 // 로그인 페이지
 #[get("/login")]
-fn login() -> Template {
+fn login(flash: Option<FlashMessage<'_>>) -> Template {
+    let flash = flash
+        .map(|flash| format!("{}", flash.message()))
+        .unwrap_or_else(|| "".to_string());
+
     Template::render(
         "sign",
         context! {
             sitename: 123,
+            flash: flash
         },
     )
 }
@@ -278,20 +285,22 @@ async fn loginpost(
     let username = user.name.clone();
     let userpw = user.password.clone();
 
-    let content = format!("SELECT password FROM usertbl WHERE userid={}", username);
+    let content = format!(r#"SELECT userpw FROM usertbl WHERE userid="{}""#, username);
 
     let query = sqlx::query(&content);
     let userdata = query.fetch_one(&mut *db).await.unwrap();
 
-    let hashed: String = userdata.get("password");
+    let hashed: String = userdata.get("userpw");
 
-    let valid = verify(userpw, &hashed).unwrap();
+    let valid = verify(userpw, &hashed);
 
-    if valid {
-        jar.add_private(Cookie::new("userid", username));
-        Flash::success(Redirect::to(uri!(index)), "성공적으로 로그인 되었습니다.")
-    } else {
-        Flash::success(Redirect::to(uri!(login)), "비밀번호가 맞지 않습니다.")
+    match valid {
+        Ok(_t) => {
+            jar.add_private(Cookie::new("userid", username));
+            Flash::success(Redirect::to(uri!(index)), "성공적으로 로그인 되었습니다.")
+        }
+
+        Err(_e) => Flash::success(Redirect::to(uri!(login)), "비밀번호가 맞지 않습니다."),
     }
 }
 

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% if flash %}
+<p>{{ flash }}</p>
+{% endif %}
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,9 +19,13 @@
   <div class="main-content-container">
     <div class="header">
       <a>동백고커뮤</a>
-      <a>자유 게시판</a>
+      <a href="/board/free">자유 게시판</a>
       <a>주식 게시판</a>
-      <a class="profile"> 로그인</a>
+      {% if isusername == true %}
+      <a class="profile"> {{ username }}</a>
+      {% else %}
+      <a class="profile" href="/login"> 로그인</a>
+      {% endif %}
     </div>
     <div class="row1">
       <div id="row1-inside-1">자유게시판</div>
