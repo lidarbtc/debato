@@ -1,6 +1,0 @@
-[default]
-secret_key = "itlYmFR2vYKrOmFhupMIn/hyB6lYCCTXz4yaQX89XVg="
-template_dir = "static"
-
-[global.databases.debato]
-url = "mysql://dbuser:abcd1234@localhost:3306/debato"

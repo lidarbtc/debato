@@ -1,10 +1,10 @@
 <div align=center>
  
-# Debato : 오픈소스 한국형 커뮤니티 CMS
+# Debato : Open-source forum CMS
  <p>
- <img src="https://img.shields.io/github/stars/lidarbtc/dongbaek-life?color=%23DF0067&style=for-the-badge"/> &nbsp;
- <img src="https://img.shields.io/github/forks/lidarbtc/dongbaek-life?color=%239999FF&style=for-the-badge"/> &nbsp;
- <img src="https://img.shields.io/github/license/lidarbtc/dongbaek-life?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/stars/lidarbtc/debato?color=%23DF0067&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/forks/lidarbtc/debato?color=%239999FF&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/license/lidarbtc/debato?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
 
 Under a maintenance : 미완성 상태입니다.
 
@@ -23,39 +23,10 @@ Under a maintenance : 미완성 상태입니다.
  cd debato
 
  cargo build --release
-
- # 여기부터 mysql (mysql 창 안에서 아래 명령어를 사용)
-```
-
-```SQL
-   CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'abcd1234';
-
-   CREATE DATABASE debato;
-
-   grant all privileges on debato.* to 'dbuser'@'localhost';
-
-   flush privileges;
-
-   # 여기서 script.sql cmd에 그대로 복사 붙여넣기
-
-   exit;
-```
-
-```sh
-
- # 여기가 mysql 끝
-
- # 실행 명령어
- ./target/release/debato
- 
- # 접속하는 방법
- 그 후 http://127.0.0.1:8000 접속
- 또한 http://127.0.0.1:8000/board/free 접속
-
 ```
 
 ## Contact Developer : 개발자 연락처
 
 ```
- session : 05c67e3461a3b17896f063535c2ade0b91639be688a6de6d5665258995f0fec660
+ session : lidar
 ```
